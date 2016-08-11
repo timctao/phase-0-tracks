@@ -17,3 +17,7 @@
 * What is a merge conflict?
 
 >A merge conflict is when a branch and master merge has created an error, usually when two separate branches have changed the same thing.
+
+* Who is the best teacher?
+
+>Obviously Glenna.
