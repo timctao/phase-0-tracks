@@ -1,16 +1,4 @@
-img.octopi	{
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	position: relative
+.relative {
+	position: relative;
 }
 
-img.spectacles	{
-	position: absolute;
-	display: block;
-	margin-left: 500px;
-}
-
-img.hat	{
-	position: absolute;
-}
