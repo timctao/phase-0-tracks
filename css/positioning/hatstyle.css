@@ -1,20 +1,23 @@
-.relative { position: relative; }
+.octopus {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  z-index: 0;
+ }
 
-.octopi {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	padding-top: 5%;
-}
-
-.spectacles {
-	position: absolute;
-	margin-left: 46%;
-	margin-top: -12%;
+.glasses {
+  position: absolute;
+  left: 18%;
+  top: 40%;
+  z-index: 1;
 }
 
 .hat {
-	position: absolute;
-	margin-left: 42%;
-	margin-top: -21%;
+  position: absolute;
+  left: -10%;
+  top: -20%;
+  z-index: 2;
 }
