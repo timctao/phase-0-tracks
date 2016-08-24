@@ -1,0 +1,27 @@
+- Decide whether you want to go up or down
+- Once decision has been made, push top button to go up, push bottom button to go down
+- Step inside the elevator and turn around 180 degrees
+- If going up:
+	- Find a number above the number of the floor you are on
+	- Press that number
+- Otherwise:
+	- Find a number below the number of the floor you are on
+	- Press that number
+- Wait for doors to close. When doors reopen, check to see if the number pressed matches the current floor number.
+- If the number matches:
+	- Walk straight forward to exit the elevator
+- Otherwise:
+	- Repeat instructions on line 10
+
+- Reheating leftovers -
+- Start by determining if leftovers are cold
+	- While leftovers are cold
+		- Open microwave
+		- Place leftovers in microwave
+		- Close microwave
+		- Heat for 1 minute
+		- Remove leftovers from microwave
+	- If leftovers are still cold
+		- Repeat lines 19-23 until leftovers are hot
+		- Then remove leftovers, and enjoy!
+
