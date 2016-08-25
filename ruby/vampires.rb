@@ -2,8 +2,14 @@ puts "What is your name?"
 vampire_name = gets.chomp
 
 puts "What year were you born?"
-vampire_age = gets.to_i
 
+	begin
+		vampire_age = Integer(gets.chomp)
+	rescue
+		puts "Please enter a valid year"
+		retry
+	end
+	
 puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
 garlic_bread = gets.chomp
 
