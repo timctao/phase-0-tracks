@@ -16,3 +16,30 @@ key = "abcdefhijklmnopqrstuvwxyz"
 	end
 	puts input
 end
+
+puts "Encrypt or Decrypt?"
+answer = gets.chomp
+
+	until answer == "Encrypt" || answer == "Decrypt"
+		puts "Invalid answer, try again"
+		answer = gets.chomp
+	end
+
+	if answer == "Encrypt"
+
+	puts "Type in passcode"
+	passcode = gets.chomp
+
+	encrypt(passcode)
+
+	end
+
+	if answer == "Decrypt"
+
+	puts "Type in coded phrase"
+	locked_phrase = gets.chomp
+
+	decrypt(locked_phrase)
+
+	end
+
