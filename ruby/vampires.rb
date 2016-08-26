@@ -3,7 +3,7 @@ def vampire_checker
 	puts "What is your name?"
 	vampire_name = gets.chomp
 
-		if vampire_name == "Alucard" || vampire_name == "Edward Cullen" || vampire_name == "Anne Rice"
+		if vampire_name == "Alucard" || vampire_name == "Edward Cullen" || vampire_name == "Anne Rice" || vampire_name == "Dracula"
 			vampire_name = true
 		else
 			vampire_name = false
@@ -96,3 +96,5 @@ puts "How many employees are you registering for?"
 num_employees.times do
 	vampire_checker	
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
