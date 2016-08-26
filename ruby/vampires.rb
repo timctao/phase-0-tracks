@@ -49,3 +49,21 @@ health_plan = gets.chomp
 	else
 		health_plan = false
 	end
+
+case
+	when vampire_name
+			puts "Definitely a vampire."
+
+	when vampire_age && garlic_bread && health_plan
+		puts "Almost definitely a vampire."
+
+	when vampire_age && (garlic_bread || health_plan)
+		puts "Probably a vampire."
+
+	when !vampire_age && !garlic_bread && !health_plan
+		puts "Probably not a vampire."
+
+	else
+		puts "Results inconclusive."
+
+end
