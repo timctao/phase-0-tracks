@@ -15,12 +15,18 @@ end
 
 def decrypt(input)
 index = 0
-alphabet = "abcdefhijklmnopqrstuvwxyz"
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 	while index < input.length
-	  input[index] = alphabet[alphabet.index(input[index])-1]
-	  index += 1
+		if input[index] == "z"
+			input[index] = "a"
+		elsif input[index] == " "
+			input[index] = " "
+		else
+			input[index] = alphabet[alphabet.index(input[index]) - 1]
+		end
+		index += 1
 	end
-	puts input
+	input
 end
 
 puts "Encrypt or Decrypt?"
@@ -36,16 +42,16 @@ answer = gets.chomp
 	puts "Type in passcode"
 	passcode = gets.chomp
 
-	encrypt(passcode)
+	p encrypt(passcode)
 
 	end
 
 	if answer == "Decrypt"
 
 	puts "Type in coded phrase"
-	locked_phrase = gets.chomp
+	locked_phrase = gets.chomp.downcase
 
-	decrypt(locked_phrase)
+	p decrypt(locked_phrase)
 
 	end
 
