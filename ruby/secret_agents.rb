@@ -54,4 +54,3 @@ answer = gets.chomp
 	p decrypt(locked_phrase)
 
 	end
-
