@@ -1,10 +1,16 @@
 def encrypt(input)
 	index = 0 
 	while index < input.length
-		input[index] = input[index].next
+		if input[index] == "z"
+			input[index] = "a"
+		elsif input[index] == " "
+			input[index] = " "
+		else
+			input[index] = input[index].next
+		end
 		index += 1 
 	end
-	puts input
+	input
 end
 
 def decrypt(input)
