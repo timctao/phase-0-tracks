@@ -20,3 +20,8 @@ garlic_bread = gets.chomp
 
 puts "Would you like to enroll in the company's health plan? (y/n)"
 health_plan = gets.chomp
+
+	until health_plan == "y" || health_plan == "n"
+		puts "Please enter valid response (y/n)"
+		health_plan = gets.chomp
+	end
