@@ -66,13 +66,13 @@ def vampire_checker
 		end
 
 	case
-		when vampire_name || allergies
+		when vampire_name
 			puts "Definitely a vampire."
 
 		when vampire_age && garlic_bread && health_plan
 			puts "Almost definitely a vampire."
 
-		when vampire_age && (garlic_bread || health_plan)
+		when vampire_age && (garlic_bread || health_plan || allergies)
 			puts "Probably a vampire."
 
 		when !vampire_age && !garlic_bread && !health_plan
