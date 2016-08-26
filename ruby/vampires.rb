@@ -52,10 +52,22 @@ def vampire_checker
 			health_plan = false
 		end
 
-	case
+	puts "Do you have any allergies? (Type 'done' when complete)"
+	allergies = gets.chomp
 
-		when vampire_name
-				puts "Definitely a vampire."
+		until allergies == "done" || allergies == "sunshine"
+			allergies = gets.chomp
+		end
+
+		if allergies == "sunshine"
+			allergies = true
+		else
+			allergies = false
+		end
+
+	case
+		when vampire_name || allergies
+			puts "Definitely a vampire."
 
 		when vampire_age && garlic_bread && health_plan
 			puts "Almost definitely a vampire."
@@ -68,7 +80,6 @@ def vampire_checker
 
 		else
 			puts "Results inconclusive."
-
 	end
 
 end
