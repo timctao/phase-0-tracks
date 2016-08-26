@@ -9,9 +9,9 @@ end
 
 def decrypt(input)
 index = 0
-key = "abcdefhijklmnopqrstuvwxyz"
+alphabet = "abcdefhijklmnopqrstuvwxyz"
 	while index < input.length
-	  input[index] = key[key.index(input[index])-1]
+	  input[index] = alphabet[alphabet.index(input[index])-1]
 	  index += 1
 	end
 	puts input
