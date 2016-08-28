@@ -1,8 +1,10 @@
 def encrypt(input)
 	index = 0 
 	while index < input.length
+		# This is to force program to act as intended when hitting edge case for "z"
 		if input[index] == "z"
 			input[index] = "a"
+		# This is to force program to act as intended to display spaces as spaces and not !
 		elsif input[index] == " "
 			input[index] = " "
 		else
