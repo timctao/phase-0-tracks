@@ -17,6 +17,7 @@ end
 
 def decrypt(input)
 index = 0
+# This acts as a key for the decrypt program by using the alphabet's index values for input
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 	while index < input.length
 		if input[index] == "z"
