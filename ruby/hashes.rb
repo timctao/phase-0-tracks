@@ -12,3 +12,7 @@ designer[:name] = gets.chomp
 
 puts "What is your DOB?"
 designer[:DOB] = gets.chomp
+
+puts "How many years have you been in design?"
+designer[:experience] = gets.to_i
+
