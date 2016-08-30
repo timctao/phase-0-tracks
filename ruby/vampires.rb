@@ -8,9 +8,10 @@ def vampire_checker
 		else
 			vampire_name = false
 		end
-
+# => I realized after someone did a peer review that I did this question incorrectly, I thought the instructions was asking me to do either/or instead of both age and year
 	puts "What year were you born?"
 
+# => Begin/rescue/retry is a nice way to form a loop, and in this case to force an answer that is an Integer. Any input other than a whole number will result in a "try again"
 		begin
 			vampire_age = Integer(gets.chomp)
 		rescue
@@ -27,6 +28,7 @@ def vampire_checker
 	puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
 	garlic_bread = gets.chomp
 
+# => Loop is to force the user into providing an actual "yes" or "no"
 		until garlic_bread == "y" || garlic_bread == "n"
 			puts "Please enter valid response (y/n)"
 			garlic_bread = gets.chomp	
@@ -65,6 +67,7 @@ def vampire_checker
 			allergies = false
 		end
 
+# => Used case instead of if/elsif/else to make code easier to read and show exactly what the output is.
 	case
 		when vampire_name
 			puts "Definitely a vampire."
@@ -86,6 +89,7 @@ end
 
 puts "How many employees are you registering for?"
 
+# => This begin/rescue/retry is specifically to prevent any non-integer input so as to not create an infinite loop of the vampire_checker program
 	begin
 		num_employees = Integer(gets.chomp)
 	rescue
@@ -93,6 +97,7 @@ puts "How many employees are you registering for?"
 		retry
 	end
 
+# => .times method allows integer input to run a code (in this case, the vampire_checker) "x" amount of times, where "x" is the integer
 num_employees.times do
 	vampire_checker	
 end
