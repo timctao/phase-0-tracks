@@ -38,7 +38,7 @@
 # "The mystery of the missing first letter".<???>
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+"Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
 # "z".<???>
