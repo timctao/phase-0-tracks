@@ -13,8 +13,9 @@
 # or
 
 "zom".insert(-2, "o")
+# => "zoom"
 
-# "enhance".<???>
+"enhance".center(15)
 # => "    enhance    "
 
 # "Stop! You’re under arrest!".<???>
