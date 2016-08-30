@@ -21,10 +21,15 @@
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+"the usual" << " suspects"
 #=> "the usual suspects"
 
-# " suspects".<???>
+# or
+
+"Sherlock Holmes is".concat(" really cool!")
+# => "Sherlock Holmes is really cool!"
+
+" suspects".prepend("the usual")
 # => "the usual suspects"
 
 # "The case of the disappearing last letter".<???>
