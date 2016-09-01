@@ -16,3 +16,22 @@ designer[:DOB] = gets.chomp
 puts "How many years have you been in design?"
 designer[:experience] = gets.to_i
 
+puts "What theme would you like the decorations to be?"
+designer[:theme] = gets.chomp
+
+p designer
+
+puts "Would you like to change any of your answers? Type 'none' if no change"
+change_input = gets.chomp
+
+	if change_input == "none"
+		change_input = nil
+	else
+		change_input = change_input.intern
+
+		puts "What is your updated answer?"
+		designer[change_input] = gets.chomp
+
+	end
+
+p designer
