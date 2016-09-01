@@ -17,6 +17,7 @@ def fibonacci( n )
     next_fib = fib[ n - 1 ] + fib[ n - 2 ]
     fib.push(next_fib)
 	end
+	fib.delete_at(-1)
 	p fib
 end 
 fibonacci( 6 )
