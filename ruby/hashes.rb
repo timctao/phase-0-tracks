@@ -16,3 +16,5 @@ designer[:DOB] = gets.chomp
 puts "How many years have you been in design?"
 designer[:experience] = gets.to_i
 
+puts "What theme would you like the decorations to be?"
+designer[:theme] = gets.chomp
