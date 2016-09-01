@@ -13,7 +13,7 @@ arr = [5, 12, 9, 20]
 
 def fibonacci( n )
 	fib = [0, 1]
-    (2..n).each do |n| - 1 
+    (2..n).each do |n|
     next_fib = fib[ n - 1 ] + fib[ n - 2 ]
     fib.push(next_fib)
 	end
