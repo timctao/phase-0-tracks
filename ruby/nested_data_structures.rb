@@ -6,7 +6,8 @@ classroom = {
 		'teacher mug',
 		'graded papers',
 		'glasses',
-		'weekly calendar'
+		'weekly calendar',
+		'pencil sharpener'
 	],
 	first_row: {
 		will_desk: {
@@ -70,10 +71,24 @@ classroom = {
 	},
 	second_row: {
 		eleven_desk: {
-			name_tag: 'Eleven'
+			name_tag: 'Eleven',
+			drink: 'Coca-cola',
+			medical_note: 'Constant nose bleeds',
+			miscellaneous: [
+				'wig',
+				'crayons',
+				'food'
+			]
 		},
 		nancy_desk: {
-			name_tag: 'Nancy Wheeler'
+			name_tag: 'Nancy Wheeler',
+			book: 'Diary',
+			folder: [
+				'classwork',
+				'flash cards',
+				'binder paper',
+			],
+			love_note: 'Love you Nance! From - Steve Harrington'
 		},
 		barb_desk: {
 			name_tag: 'Barbara Holland'
