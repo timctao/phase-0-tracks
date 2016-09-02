@@ -91,16 +91,32 @@ classroom = {
 			love_note: 'Love you Nance! From - Steve Harrington'
 		},
 		barb_desk: {
-			name_tag: 'Barbara Holland'
+			name_tag: 'Barbara Holland',
+			teacher_note: 'Returned all items to Mr. and Mrs. Holland'
 		},
 		jonathan_desk: {
-			name_tag: 'Jonathan Wheeler'
+			name_tag: 'Jonathan Wheeler',
+			bag: [
+				'camera',
+				'lens',
+				'photos'
+			],
+			record: 'The Clash - Should I Stay or Should I Go'
 		}
 	},
 	supply_closet: {
 		top_shelf: [
+			'tape',
+			'glue',
+			'pencils',
+			'note cards'
 		], 
 		bottom_shelf: [
+			'folders',
+			'binder paper',
+			'storage boxes',
+			'rulers'
 		]
 	}
 }
+
