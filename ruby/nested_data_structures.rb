@@ -1,19 +1,19 @@
 # Release 2: Nested Data Structures - Classroom
 
 classroom = {
-	teacher_desk = [
+	teacher_desk: [
 
 	],
-	first_row = {
+	first_row: {
 
 	},
-	second_row = {
+	second_row: {
 
 	},
-	third_row = {
+	third_row: {
 
 	},
-	supply_closet = {
-		
+	supply_closet: {
+
 	}
 }
