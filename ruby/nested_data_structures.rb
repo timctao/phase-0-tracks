@@ -2,23 +2,70 @@
 
 classroom = {
 	teacher_desk: [
-
+		'red pen',
+		'teacher mug',
+		'graded papers',
+		'glasses',
+		'weekly calendar'
 	],
 	first_row: {
 		will_desk: {
 			name_tag: 'Will Byers',
 			book: 'Lord of the Rings',
-			folder: ["drawings", "classwork"],
-			miscellaneous: ["black pen", "pencil", "dice bag"]
+			folder: [
+				'drawings',
+				'classwork',
+				'binder paper'
+			],
+			miscellaneous: [
+				'pencil',
+				'black pen',
+				'eraser',
+				'dice bag'
+			]
 		},
 		lucas_desk: {
-			name_tag: 'Lucas Sinclair'
+			name_tag: 'Lucas Sinclair',
+			book: 'The Hobbit',
+			folder: [
+				'classwork',
+				'binder paper'
+			],
+			miscellaneous: [
+				'pencil',
+				'black pen',
+				'eraser',
+				'walkie-talkie'
+			]
+
 		}, 
 		dustin_desk: {
-			name_tag: 'Dustin Henderson'
+			name_tag: 'Dustin Henderson',
+			medical_note: 'Cleidocranial dysplasia',
+			folder: [
+				'classwork',
+				'binder paper',
+			],
+			miscellaneous: [
+				'pencil',
+				'black pen',
+				'eraser',
+				'compass'
+			]
 		},
 		mike_desk: {
-			name_tag: 'Mike Wheeler'
+			name_tag: 'Mike Wheeler',
+			book: 'Dungeon Masters Guide',
+			folder: [
+				'classwork',
+				'binder paper',
+			],
+			miscellaneous: [
+				'pencil',
+				'black pen',
+				'eraser',
+				'walkie-talkie'
+			]
 		}
 	},
 	second_row: {
