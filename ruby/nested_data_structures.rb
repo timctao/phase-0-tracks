@@ -120,3 +120,17 @@ classroom = {
 	}
 }
 
+p classroom[:teacher_desk][2]
+# => prints "graded papers"
+
+p classroom[:first_row][:dustin_desk][:medical_note]
+# => prints "Cleidocranial dysplasia"
+
+p classroom[:first_row][:mike_desk][:miscellaneous]
+# => prints all items in the miscellaneous array
+
+p classroom[:second_row][:jonathan_desk][:bag][0]
+# => prints camera
+
+p classroom
+# => prints entire hash and all nested data within
