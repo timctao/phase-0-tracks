@@ -1,39 +1,34 @@
-# Release 2: Nested Data Structures - Classroom
+# Release 2: Nested Data Structures - Classroom: Stranger Things
 
 classroom = {
 	teacher_desk: [
 
 	],
 	first_row: {
-		left_desk: {
+		will_desk: {
 
 		},
-		middle_desk: {
+		lucas_desk: {
 
 		}, 
-		right_desk: {
+		dustin_desk: {
+
+		},
+		mike_desk: {
 
 		}
 	},
 	second_row: {
-		left_desk: {
+		eleven_desk: {
 
 		},
-		middle_desk: {
+		nancy_desk: {
 
 		},
-		right_desk: {
-
-		}
-	},
-	third_row: {
-		left_desk: {
+		barb_desk: {
 
 		},
-		middle_desk: {
-
-		},
-		right_desk:{
+		jonathan_desk: {
 
 		}
 	},
