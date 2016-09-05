@@ -20,7 +20,7 @@ def vowel_converter(swapped_name)
 end
 
 def consonant_converter(swapped_name)
-	code_name = swapped_name.chars
+	code_name = swapped_name.downcase.chars
 	consonants = %w{b c d f g h j k l m n p q r s t v w x y z}
 	code_name.map! do |letter|
 		if letter == "z"
