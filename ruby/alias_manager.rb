@@ -4,16 +4,20 @@
 # For every consonant, convert that consonant to the next consonant in line
 # Once all letters have been converted, dispay new alias for the inputted name
 
+# This will swap the first name with the last name
 def name_swap(first_name, last_name)
 	code_name = []
 	code_name.push(first_name, last_name)
 	code_name.reverse!.join(' ')
 end
 
+# This method will convert any vowels in the name to the next vowel in line
 def vowel_converter(swapped_name)
+	# Forces all letters to be lower case in order for code to work properly
 	code_name = swapped_name.downcase.chars
 	vowels = %w{a e i o u}
 	code_name.map! do |letter|
+		# Edge case fix to make code work as intended
 		if letter == "u"
 			letter = "a"
 		elsif vowels.include?(letter)
@@ -22,6 +26,7 @@ def vowel_converter(swapped_name)
 			letter
 		end
 	end
+	# This re-capitalizes the first letter of each part of the name
 	code_name.join('').split.map(&:capitalize).join(' ')
 end
 
