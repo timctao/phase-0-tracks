@@ -51,24 +51,32 @@ end
 # Interface
 
 def alias_interface
+	alias_database = {}
 
-	puts "Please enter first name:"
-	first_name = gets.chomp
+	puts "Push ENTER to run program (Type quit to exit)"
+	user_input = gets.chomp
 
-	puts "Please enter last name:"
-	last_name = gets.chomp
+	until user_input == "quit"
 
-	p consonant_converter(vowel_converter(name_swap(first_name, last_name)))
+		puts "Please enter first name:"
+		first_name = gets.chomp
 
+		puts "Please enter last name:"
+		last_name = gets.chomp
+
+		code_name = consonant_converter(vowel_converter(name_swap(first_name, last_name)))
+
+		first_name = first_name + " "
+
+		full_name = first_name + last_name
+
+		alias_database[full_name] = code_name
+
+		puts "Push ENTER to run program again (Type quit to exit)"
+		user_input = gets.chomp
+
+	end
+	alias_database.each_pair {|full_name, code_name| puts "#{code_name} is actually #{full_name}"}
 end
 
 alias_interface
-
-puts "Push ENTER to run again (Type quit to stop)"
-repeat = gets.chomp
-
-	until repeat == "quit"
-		alias_interface
-		puts "Push ENTER to run again (Type quit to stop)"
-		repeat = gets.chomp
-	end
