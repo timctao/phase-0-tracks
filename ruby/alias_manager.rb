@@ -45,4 +45,6 @@ def consonant_converter(swapped_name)
 	code_name.join('').split.map(&:capitalize).join(' ')
 end
 
-p consonant_converter(vowel_converter(name_swap("Felicia", "Torres")))
+# p consonant_converter(vowel_converter(name_swap("Felicia", "Torres")))
+# => Returns "Vussit Gimodoe"
+
