@@ -48,3 +48,27 @@ end
 # p consonant_converter(vowel_converter(name_swap("Felicia", "Torres")))
 # => Returns "Vussit Gimodoe"
 
+# Interface
+
+def alias_interface
+
+	puts "Please enter first name:"
+	first_name = gets.chomp
+
+	puts "Please enter last name:"
+	last_name = gets.chomp
+
+	p consonant_converter(vowel_converter(name_swap(first_name, last_name)))
+
+end
+
+alias_interface
+
+puts "Push ENTER to run again (Type quit to stop)"
+repeat = gets.chomp
+
+	until repeat == "quit"
+		alias_interface
+		puts "Push ENTER to run again (Type quit to stop)"
+		repeat = gets.chomp
+	end
