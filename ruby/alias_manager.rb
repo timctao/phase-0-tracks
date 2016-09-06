@@ -1,3 +1,9 @@
+# Ask user to input first name and last name
+# When name has been inputted, swap the first and last name
+# For every vowel, convert that vowel to the next vowel in line
+# For every consonant, convert that consonant to the next consonant in line
+# Once all letters have been converted, dispay new alias for the inputted name
+
 def name_swap(first_name, last_name)
 	code_name = []
 	code_name.push(first_name, last_name)
