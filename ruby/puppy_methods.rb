@@ -34,12 +34,38 @@ class Puppy
 
 end
 
-puppy = Puppy.new.fetch("train")
+class Human
 
-bark = Puppy.new.speak(4)
+	def initialize
+		p "Initializing human instance..."
+	end
 
-trick = Puppy.new.roll_over
+	def work(job)
+		puts "I work as a #{job}"
+	end
 
-age = Puppy.new.dog_years(3)
+	def greeting(name)
+		puts "Hi, my name is #{name}"
+	end
 
-new_trick = Puppy.new.play_dead
+end
+
+
+# puppy = Puppy.new.fetch("train")
+
+# bark = Puppy.new.speak(4)
+
+# trick = Puppy.new.roll_over
+
+# age = Puppy.new.dog_years(3)
+
+# new_trick = Puppy.new.play_dead
+
+
+humans = []
+
+50.times do
+	humans << Human.new
+end
+
+p humans
