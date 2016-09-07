@@ -1,3 +1,5 @@
+# Meredith Jones and Timothy Tao paired
+
 class Puppy
 
   def initialize
