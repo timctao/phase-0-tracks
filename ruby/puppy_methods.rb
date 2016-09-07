@@ -68,4 +68,7 @@ humans = []
 	humans << Human.new
 end
 
-p humans
+humans.each do |human|
+	human.greeting("Glenna")
+	human.work("Programmer")
+end
