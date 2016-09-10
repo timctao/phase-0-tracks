@@ -69,10 +69,10 @@ number.times do
 		rand(140).times do
 			santa.celebrate_birthday
 		end 
-			p "Santa registration ##{x}"
-			p "Gender: #{santa.gender}"
-			p "Ethnicity: #{santa.ethnicity}"
-		    p "Age: #{santa.age}"
+			puts "Santa registration ##{x}"
+			puts "Gender: #{santa.gender}"
+			puts "Ethnicity: #{santa.ethnicity}"
+		    puts "Age: #{santa.age}"
 		    x += 1
 	end
 end
