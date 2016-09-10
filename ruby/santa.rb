@@ -52,5 +52,10 @@ end
 
 santa = Santa.new("male", "asian")
 
-
-p santa.get_mad_at("Rudolph")
+santa
+# Returns <Santa:0x2f2df70 @gender="male", @ethnicity="asian", @reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"], @age=0>
+santa.celebrate_birthday
+santa.get_mad_at("Rudolph")
+santa.gender = "female"
+santa
+# Returns <Santa:0x2f2df70 @gender="female", @ethnicity="asian", @reindeer_ranking=["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Rudolph"], @age=1>
