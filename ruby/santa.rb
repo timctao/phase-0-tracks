@@ -1,7 +1,7 @@
 class Santa
+
 	attr_reader :age, :ethnicity
 	attr_accessor :gender
-
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance..."
@@ -46,19 +46,27 @@ class Santa
 
 end
 
-# santas = []
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
+# santa = Santa.new("male", "asian")
 
-santa = Santa.new("male", "asian")
+# santa
+# => Returns <Santa:0x2f2df70 @gender="male", @ethnicity="asian", @reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"], @age=0>
+# santa.celebrate_birthday
+# santa.get_mad_at("Rudolph")
+# santa.gender = "female"
+# santa
+# => Returns <Santa:0x2f2df70 @gender="female", @ethnicity="asian", @reindeer_ranking=["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Rudolph"], @age=1>
 
-santa
-# Returns <Santa:0x2f2df70 @gender="male", @ethnicity="asian", @reindeer_ranking=["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"], @age=0>
-santa.celebrate_birthday
-santa.get_mad_at("Rudolph")
-santa.gender = "female"
-santa
-# Returns <Santa:0x2f2df70 @gender="female", @ethnicity="asian", @reindeer_ranking=["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen", "Rudolph"], @age=1>
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "trigender"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "alien", "demigorgon"]
+
+santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+rand(140).times do
+	santa.celebrate_birthday
+end
+
+p santa.age
+
+
+
+
+
