@@ -59,14 +59,20 @@ end
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "trigender"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "alien", "demigorgon"]
 
-santa = Santa.new(example_genders.sample, example_ethnicities.sample)
-rand(140).times do
-	santa.celebrate_birthday
+puts "How many santas would you like to register?"
+number = gets.to_i
+x = 1
+
+number.times do
+	until x == number + 1
+		santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+		rand(140).times do
+			santa.celebrate_birthday
+		end 
+			p "Santa registration ##{x}"
+			p "Gender: #{santa.gender}"
+			p "Ethnicity: #{santa.ethnicity}"
+		    p "Age: #{santa.age}"
+		    x += 1
+	end
 end
-
-p santa.age
-
-
-
-
-
