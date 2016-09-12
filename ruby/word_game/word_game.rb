@@ -14,15 +14,13 @@ class Hangman
 	attr_accessor :word
 
 	def initialize(word)
-		@word = word
+		@word = word.chars
 		@hint = nil
 		@guess_count = word.length
 	end
 
 	def convert_word
-		input_word = @word.chars
-		word_blank = input_word.map { "_" }
-		@hint = word_blank.join(' ')
+		@hint = @word.map { "_" }
 	end
 
 end
