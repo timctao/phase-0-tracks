@@ -7,3 +7,6 @@
 # If the letter guessed is a repeat, answer with "You already guessed that letter, try another". Guess count remains the same
 # If user 2 manages to complete the word before guess counter reaches 0, display congratulations message
 # If user 2 does not manage to complete the word before guess counter reaches 0, display taunting message
+
+class Hangman
+end
