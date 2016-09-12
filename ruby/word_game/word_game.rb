@@ -10,7 +10,7 @@
 
 class Hangman
 
-	attr_accessor :word, :correct_letters, :all_guesses, :guess_count, :hint
+	attr_accessor :word, :correct_letters, :all_guesses, :guess_count, :hint, :win, :lose
 
 	def initialize(word)
 		@word = word.chars
@@ -18,6 +18,8 @@ class Hangman
 		@guess_count = word.length
 		@correct_letters = []
 		@all_guesses = []
+		@win = false
+		@lose = false
 	end
 
 	def guess_letter(letter)
@@ -48,28 +50,37 @@ class Hangman
 		@hint.rstrip!
 	end
 
+	def winner
+		@win = true
+	end
+
+	def loser
+		@lose = true
+	end
+
 end
 
-# puts "Welcome to Hang Man! User 1, please input a word:"
-# word = gets.chomp
-# game = Hangman.new(word)
-# win = false
-# lose = false
+puts "Welcome to Hang Man! User 1, please input a word:"
+word = gets.chomp
+game = Hangman.new(word)
 
-# while win != true || game.guess_count != 0
-# 	puts "User 2, you have #{game.guess_count} guesses. Please input a letter:"
-# 	puts game.display_hint
-# 	letter = gets.chomp
-# 	game.repeat_letter(letter)
-# 	game.guess_letter(letter)
-# 	game.guess_count -= 1
-# 	final = game.hint.split.join
-# 	if final == word
-# 		win = true
-# 		break
-# 	end
-# end
+while game.win != true && game.lose != true
+	puts "User 2, you have #{game.guess_count} guesses. Please input a letter:"
+	puts game.display_hint
+	letter = gets.chomp
+	game.repeat_letter(letter)
+	game.guess_letter(letter)
+	game.guess_count -= 1
 
-# p final
+	if game.hint.split.join == word
+		p "Congratulations! You are the winner! The word was #{word}!"
+		game.win
+		break
+	end
+	if game.guess_count == 0
+		p "You are a loser!"
+		game.lose
+		break
+	end
 
-# p word
+end
