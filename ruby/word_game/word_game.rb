@@ -78,6 +78,7 @@ while game.win == false && game.lose == false
 		game.winner
 		break
 	end
+	
 	if game.guess_count == 0
 		p "You are a loser! You guessed #{game.hint.split.join} when the word was actually #{word}!"
 		game.loser
