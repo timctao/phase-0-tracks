@@ -15,6 +15,15 @@ class Hangman
 		@word = word
 	end
 
+	def word_blank
+		input_word = @word.chars
+		word_blank = input_word.map do
+			"_"
+		end
+		underscore_word = word_blank.join(' ')
+		underscore_word
+	end
+
 	def get_word
 		@word
 	end
