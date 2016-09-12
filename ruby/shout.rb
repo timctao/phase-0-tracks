@@ -30,4 +30,8 @@ class Child
 	include Shout
 end
 
+adult = Adult.new
+adult.selfish_yell("money")
 
+child = Child.new
+child.selfish_yell("toy")
