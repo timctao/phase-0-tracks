@@ -23,10 +23,10 @@ class Hangman
 
 	def guess_letter(letter)
 		if @word.include?(letter)
-			@correct_letters << letter
-			@all_guesses << letter
+			@correct_letters.push(letter)
+			@all_guesses.push(letter)
 		else
-			@all_guesses << letter
+			@all_guesses.push(letter)
 		end
 	end
 
