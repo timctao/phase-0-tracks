@@ -11,17 +11,36 @@
 class Hangman
 
 	attr_reader :guess_count, :hint
-	attr_accessor :word
+	attr_accessor :word, :correct_letters, :all_guesses
 
 	def initialize(word)
 		@word = word.chars
-		@hint = nil
+		@hint = ''
 		@guess_count = word.length
+		@correct_letters = []
+		@all_guesses = []
 	end
 
-	def convert_word
-		@hint = @word.map { "_" }
+	def guess_letter(letter)
+		if @word.include?(letter)
+			@correct_letters << letter
+			@all_guesses << letter
+		else
+			@all_guesses << letter
+		end
 	end
+
+	# def hint_dispay
+	# 	@hint = ''
+	# 	@word.each do
+	# 		if @word.include?(letter)
+	# 			@hint += "#{letter} "
+	# 		else
+	# 			@hint += "_ "
+	# 		end
+	# 	end
+	# 	@hint
+	# end
 
 end
 
