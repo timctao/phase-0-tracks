@@ -9,4 +9,14 @@
 # If user 2 does not manage to complete the word before guess counter reaches 0, display taunting message
 
 class Hangman
+
+
+	def initialize(word)
+		@word = word
+	end
+
+	def get_word
+		@word
+	end
+
 end
