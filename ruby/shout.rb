@@ -9,3 +9,7 @@ module Shout
 	end
 
 end
+
+p Shout.yell_angrily("I'm tired")
+
+p Shout.yelling_happily("Hello")
