@@ -21,9 +21,7 @@ class Hangman
 
 	def convert_word
 		input_word = @word.chars
-		word_blank = input_word.map do
-			"_"
-		end
+		word_blank = input_word.map { "_" }
 		@hint = word_blank.join(' ')
 	end
 
