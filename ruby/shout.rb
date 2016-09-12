@@ -1,15 +1,33 @@
+# module Shout
+
+# 	def self.yell_angrily(words)
+#     	words + "!!!" + " :("
+# 	end
+
+# 	def self.yelling_happily(words)
+# 		words + "!!!" + " :)"
+# 	end
+
+# end
+
+# p Shout.yell_angrily("I'm tired")
+
+# p Shout.yelling_happily("Hello")
+
 module Shout
 
-	def self.yell_angrily(words)
-    	words + "!!!" + " :("
-	end
-
-	def self.yelling_happily(words)
-		words + "!!!" + " :)"
+	def selfish_yell(noun)
+		puts "It's my #{noun} and I want it now!!!"
 	end
 
 end
 
-p Shout.yell_angrily("I'm tired")
+class Adult
+	include Shout
+end
 
-p Shout.yelling_happily("Hello")
+class Child
+	include Shout
+end
+
+
