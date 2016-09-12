@@ -25,7 +25,6 @@ class Hangman
 			"_"
 		end
 		@hint = word_blank.join(' ')
-		@hint
 	end
 
 end
