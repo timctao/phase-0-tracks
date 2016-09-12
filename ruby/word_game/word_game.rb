@@ -30,17 +30,17 @@ class Hangman
 		end
 	end
 
-	# def hint_dispay
-	# 	@hint = ''
-	# 	@word.each do
-	# 		if @word.include?(letter)
-	# 			@hint += "#{letter} "
-	# 		else
-	# 			@hint += "_ "
-	# 		end
-	# 	end
-	# 	@hint
-	# end
+	def display_hint
+		@hint = ''
+		@word.each do |letter|
+			if @correct_letters.include?(letter)
+				@hint += "#{letter} "
+			else
+				@hint += "_ "
+			end
+		end
+		@hint.rstrip!
+	end
 
 end
 

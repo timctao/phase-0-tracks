@@ -23,4 +23,9 @@ describe Hangman do
 		expect(game.guess_letter("e")).to eq ["e"]		
 	end
 
+	it "displays correct guesses in a hint string" do 
+		game.correct_letters = ["t"]
+		expect(game.display_hint).to eq "t _ _ t"
+	end
+
 end
