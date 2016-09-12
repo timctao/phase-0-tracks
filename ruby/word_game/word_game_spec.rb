@@ -8,7 +8,7 @@ describe Hangman do
 	end
 
 	it "replaces the input word with blank underscores" do
-		expect(game.word_blank).to eq "_ _ _ _"
+		expect(game.underscores).to eq "_ _ _ _"
 	end
 
 	it "displays current guess count" do
