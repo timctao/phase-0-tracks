@@ -10,8 +10,7 @@
 
 class Hangman
 
-	attr_reader :guess_count, :hint
-	attr_accessor :word, :correct_letters, :all_guesses
+	attr_accessor :word, :correct_letters, :all_guesses, :guess_count, :hint
 
 	def initialize(word)
 		@word = word.chars
@@ -30,6 +29,13 @@ class Hangman
 		end
 	end
 
+	def repeat_letter(letter)
+		if @all_guesses.include?(letter)
+			@guess_count += 1
+			p "That letter has been used, please try another:"
+		end
+	end
+
 	def display_hint
 		@hint = ''
 		@word.each do |letter|
@@ -44,6 +50,26 @@ class Hangman
 
 end
 
-puts "Welcome to Hang Man! User 1, please input a word:"
-word = gets.chomp
-game = Hangman.new(word)
+# puts "Welcome to Hang Man! User 1, please input a word:"
+# word = gets.chomp
+# game = Hangman.new(word)
+# win = false
+# lose = false
+
+# while win != true || game.guess_count != 0
+# 	puts "User 2, you have #{game.guess_count} guesses. Please input a letter:"
+# 	puts game.display_hint
+# 	letter = gets.chomp
+# 	game.repeat_letter(letter)
+# 	game.guess_letter(letter)
+# 	game.guess_count -= 1
+# 	final = game.hint.split.join
+# 	if final == word
+# 		win = true
+# 		break
+# 	end
+# end
+
+# p final
+
+# p word

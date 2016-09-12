@@ -20,4 +20,9 @@ describe Hangman do
 		expect(game.display_hint).to eq "t _ _ t"
 	end
 
+	it "takes a repeated letter and displays a message to pick another" do 
+		game.all_guesses = ["t"]
+		expect(game.repeat_letter("t")).to eq "That letter has been used, please try another:"
+	end
+
 end
