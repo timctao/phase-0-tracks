@@ -10,26 +10,23 @@
 
 class Hangman
 
-	attr_reader :guess_count, :word_blank
+	attr_reader :guess_count, :hint
 	attr_accessor :word
 
 	def initialize(word)
 		@word = word
-		@word_blank = nil
+		@hint = nil
 		@guess_count = word.length
 	end
 
-	def underscores
+	def convert_word
 		input_word = @word.chars
 		word_blank = input_word.map do
 			"_"
 		end
-		@word_blank = word_blank.join(' ')
-		@word_blank
+		@hint = word_blank.join(' ')
+		@hint
 	end
-
-	# def guess_letter(letter)
-	# end
 
 end
 
