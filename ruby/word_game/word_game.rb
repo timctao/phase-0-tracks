@@ -13,6 +13,7 @@ class Hangman
 
 	def initialize(word)
 		@word = word
+		@guess_count = word.length
 	end
 
 	def word_blank
@@ -26,6 +27,10 @@ class Hangman
 
 	def get_word
 		@word
+	end
+
+	def guess_count
+		@guess_count
 	end
 
 end
