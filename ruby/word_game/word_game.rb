@@ -10,6 +10,8 @@
 
 class Hangman
 
+	attr_reader :guess_count
+	attr_accessor :word
 
 	def initialize(word)
 		@word = word
@@ -25,12 +27,8 @@ class Hangman
 		underscore_word
 	end
 
-	def get_word
-		@word
-	end
-
-	def guess_count
-		@guess_count
-	end
-
 end
+
+puts "Welcome to Hang Man! Please input a word:"
+word = gets.chomp
+game = Hangman.new(word)
