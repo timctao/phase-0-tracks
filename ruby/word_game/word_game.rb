@@ -64,7 +64,8 @@ puts "Welcome to Hang Man! User 1, please input a word:"
 word = gets.chomp
 game = Hangman.new(word)
 
-while game.win != true && game.lose != true
+while game.win == false && game.lose == false
+
 	puts "User 2, you have #{game.guess_count} guesses. Please input a letter:"
 	puts game.display_hint
 	letter = gets.chomp
@@ -74,12 +75,12 @@ while game.win != true && game.lose != true
 
 	if game.hint.split.join == word
 		p "Congratulations! You are the winner! The word was #{word}!"
-		game.win
+		game.winner
 		break
 	end
 	if game.guess_count == 0
-		p "You are a loser!"
-		game.lose
+		p "You are a loser! You guessed #{game.hint.split.join} when the word was actually #{word}!"
+		game.loser
 		break
 	end
 
