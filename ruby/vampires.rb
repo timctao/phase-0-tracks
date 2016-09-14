@@ -3,23 +3,33 @@ def vampire_checker
 	puts "What is your name?"
 	vampire_name = gets.chomp
 
-		if vampire_name == "Alucard" || vampire_name == "Edward Cullen" || vampire_name == "Anne Rice" || vampire_name == "Dracula"
+		if vampire_name == "Drak Cula" || vampire_name == "Tu Fang"
 			vampire_name = true
 		else
 			vampire_name = false
 		end
-# => I realized after someone did a peer review that I did this question incorrectly, I thought the instructions was asking me to do either/or instead of both age and year
-	puts "What year were you born?"
 
-# => Begin/rescue/retry is a nice way to form a loop, and in this case to force an answer that is an Integer. Any input other than a whole number will result in a "try again"
+	puts "How old are you?"
+
 		begin
 			vampire_age = Integer(gets.chomp)
+		rescue
+			puts "Please enter a valid age"
+			retry
+		end
+
+	puts "What year were you born?"
+
+		begin
+			birth_year = Integer(gets.chomp)
 		rescue
 			puts "Please enter a valid year"
 			retry
 		end
 
-		if vampire_age <= 1916 || vampire_age >=2016
+		current_year = 2016
+
+		if current_year - birth_year != vampire_age
 			vampire_age = true
 		else
 			vampire_age = false
@@ -75,7 +85,10 @@ def vampire_checker
 		when vampire_age && garlic_bread && health_plan
 			puts "Almost definitely a vampire."
 
-		when vampire_age && (garlic_bread || health_plan || allergies)
+		when allergies
+			puts "Probably a vampire."
+
+		when vampire_age && (garlic_bread || health_plan)
 			puts "Probably a vampire."
 
 		when !vampire_age && !garlic_bread && !health_plan
