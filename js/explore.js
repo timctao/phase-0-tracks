@@ -16,3 +16,10 @@ function reverse_string(word) {
 reverse_string("hello")
 reverse_string("Javascript is not as cool as ruby")
 reverse_string("abcdefghijklmnopqrstuvwxyz")
+
+// Print a variable if statement is true
+
+var math = 5
+if (2 + 3 == math) {
+	console.log("2 + 3 is equal to " + math)
+}
