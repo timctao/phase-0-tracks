@@ -24,6 +24,13 @@ function match_pair(input_1, input_2) {
 	return match_pair
 }
 
+// Release 2: Write a function that takes an integer for length, and builds and returns an array of strings of the given length.
+// I was not able to complete this in time
+
+// function random_letters() {
+	
+// }
+
 // Driver code
 
 var array = [
