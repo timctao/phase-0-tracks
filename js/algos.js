@@ -2,9 +2,9 @@
 
 function longest_phrase(array) {
 	var longest_phrase = "";
-	for (var i = 0; i < array.length; i++) {
-		if (array[i].length > longest_phrase.length) {
-			longest_phrase = array[i]
+	for (var index = 0; index < array.length; index++) {
+		if (array[index].length > longest_phrase.length) {
+			longest_phrase = array[index]
 		}
 	}
 	return (longest_phrase)
