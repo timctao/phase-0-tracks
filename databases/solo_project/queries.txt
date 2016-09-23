@@ -1,0 +1,70 @@
+1. Display the information in one table (either table is fine).
+
+	SELECT * FROM types;
+
+	1|fire
+	2|water
+	3|grass
+	4|electric
+	5|psychic
+	6|ice
+	7|dragon
+	8|normal
+	9|fighting
+	10|flying
+	11|poison
+	12|ground
+	13|rock
+	14|bug
+	15|ghost
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+	UPDATE pokemon SET evolve="false" WHERE name="Charizard";
+
+3. Display the information in both tables using one query.
+
+	SELECT * FROM pokemon, types
+	   ...> WHERE pokemon.type_id = types.id;
+
+	1|Bulbasaur|true|3|3|grass
+	2|Ivysaur|true|3|3|grass
+	3|Venusaur|false|3|3|grass
+	4|Charmander|true|1|1|fire
+	5|Charmeleon|true|1|1|fire
+	6|Charizard|false|1|1|fire
+	7|Squirtle|true|2|2|water
+	8|Wartortle|true|2|2|water
+	9|Blastoise|false|2|2|water
+	10|Caterpie|true|14|14|bug
+	11|Metapod|true|14|14|bug
+	12|Butterfree|false|14|14|bug
+	13|Weedle|true|14|14|bug
+	14|Kakuna|true|14|14|bug
+	15|Beedrill|false|14|14|bug
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+	 SELECT pokemon.id, pokemon.name, pokemon.evolve, types.name FROM pokemon
+	   ...> JOIN types ON pokemon.type_id = types.id;
+
+	1|Bulbasaur|true|grass
+	2|Ivysaur|true|grass
+	3|Venusaur|false|grass
+	4|Charmander|true|fire
+	5|Charmeleon|true|fire
+	6|Charizard|false|fire
+	7|Squirtle|true|water
+	8|Wartortle|true|water
+	9|Blastoise|false|water
+	10|Caterpie|true|bug
+	11|Metapod|true|bug
+	12|Butterfree|false|bug
+	13|Weedle|true|bug
+	14|Kakuna|true|bug
+	15|Beedrill|false|bug
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+	DELETE FROM pokemon
+	   ...> WHERE name="Beedrill";
