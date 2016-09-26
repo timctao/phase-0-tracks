@@ -2,6 +2,7 @@ require 'sqlite3'
 
 # Create database for calorie counting
 db = SQLite3::Database.new("calories.db")
+db.results_as_hash = true
 
 # Creates info tables in calorie database
 create_meat_table = <<-SQL
@@ -41,17 +42,32 @@ db.execute(create_dairy_table)
 db.execute(create_fruits_veggies_table)
 db.execute(create_sweets_snacks_table)
 
+def meat_adder(db, name, calories)
+	db.execute("INSERT INTO meats (name, calories) VALUES (?, ?)", [name, calories])
+end
+
+def dairy_adder(db, name, calories)
+	db.execute("INSERT INTO dairy (name, calories) VALUES (?, ?)", [name, calories])
+end
+
+def sweets_snacks_adder(db, name, calories)
+	db.execute("INSERT INTO sweets_snacks (name, calories) VALUES (?, ?)", [name, calories])
+end
+
+def fruits_veggies_adder(db, name, calories)
+	db.execute("INSERT INTO fruits_veggies (name, calories) VALUES (?, ?)", [name, calories])
+end
+
+
+
 # puts "Hello! This is a test. Add name of item"
 # meat = gets.chomp
-
-# puts "Servings?"
-# amount = gets.to_i
 
 # puts "Calories?"
 # calories = gets.to_i
 
-# def meat_adder(db, name, servings, calories)
-# 	db.execute("INSERT INTO meats (name, servings, calories) VALUES (?, ?, ?)", [name, servings, calories])
-# end
+# meat_list = db.execute("SELECT * FROM meats")
 
-# meat_adder(db, "salmon", 1, 300)
+# meat_list.each do |meat|
+# 	puts "#{meat['id']}: #{meat['name']}, Calories: #{meat['calories']}"
+# end
