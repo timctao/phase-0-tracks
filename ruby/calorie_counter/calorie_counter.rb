@@ -37,11 +37,21 @@ create_sweets_snacks_table = <<-SQL
 	)
 SQL
 
+create_calorie_calculator = <<-SQL
+	CREATE TABLE IF NOT EXISTS calorie_calculator (
+		id INTEGER PRIMARY KEY,
+		date VARCHAR(255),
+		total_calories INT
+	)
+SQL
+
 db.execute(create_meat_table)
 db.execute(create_dairy_table)
 db.execute(create_fruits_veggies_table)
 db.execute(create_sweets_snacks_table)
+db.execute(create_calorie_calculator)
 
+# Methods for adding items to each information table
 def meat_adder(db, name, calories)
 	db.execute("INSERT INTO meats (name, calories) VALUES (?, ?)", [name, calories])
 end
@@ -57,14 +67,6 @@ end
 def fruits_veggies_adder(db, name, calories)
 	db.execute("INSERT INTO fruits_veggies (name, calories) VALUES (?, ?)", [name, calories])
 end
-
-
-
-# puts "Hello! This is a test. Add name of item"
-# meat = gets.chomp
-
-# puts "Calories?"
-# calories = gets.to_i
 
 # meat_list = db.execute("SELECT * FROM meats")
 
