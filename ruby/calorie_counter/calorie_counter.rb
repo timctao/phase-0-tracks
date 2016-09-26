@@ -28,9 +28,18 @@ create_fruits_veggies_table = <<-SQL
 	)
 SQL
 
+create_sweets_snacks_table = <<-SQL
+	CREATE TABLE IF NOT EXISTS sweets_snacks (
+		id INTEGER PRIMARY KEY,
+		name VARCHAR(255),
+		calories INT
+	)
+SQL
+
 db.execute(create_meat_table)
 db.execute(create_dairy_table)
 db.execute(create_fruits_veggies_table)
+db.execute(create_sweets_snacks_table)
 
 # puts "Hello! This is a test. Add name of item"
 # meat = gets.chomp
