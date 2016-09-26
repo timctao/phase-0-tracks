@@ -34,3 +34,18 @@ SQL
 db.execute(create_meat_table)
 db.execute(create_dairy_table)
 db.execute(create_fruits_veggies_table)
+
+# puts "Hello! This is a test. Add name of item"
+# meat = gets.chomp
+
+# puts "Servings?"
+# amount = gets.to_i
+
+# puts "Calories?"
+# calories = gets.to_i
+
+def meat_adder(db, name, servings, calories)
+	db.execute("INSERT INTO meats (name, servings, calories) VALUES (?, ?, ?)", [name, servings, calories])
+end
+
+meat_adder(db, "salmon", 1, 300)
