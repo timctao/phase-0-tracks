@@ -68,7 +68,7 @@ def fruits_veggies_adder(db, name, calories)
 	db.execute("INSERT INTO fruits_veggies (name, calories) VALUES (?, ?)", [name, calories])
 end
 
-def calorie_date(db, date)
+def add_date(db, date)
 	db.execute("INSERT INTO calorie_calculator (date, total_calories) VALUES (?, 0)", [date])
 end
 
@@ -84,7 +84,7 @@ input_date = gets.chomp
 target_date = view_date(db, input_date)
 
 if target_date == []
-	calorie_date(db, input_date)
+	add_date(db, input_date)
 	target_date = view_date(db, input_date)
 	puts "Adding new date to database..."	
 end
